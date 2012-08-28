@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, TestOpenGLActivity!</string>
+    <string name="app_name">TestOpenGL</string>
+    <string name="reload_shaders">Reload Shaders</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section1">Section 1</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="red">"R: "</string>
+    <string name="bString">"B: "</string>
+    <string name="green">"G: "</string>
+    <string name="title_activity_hybrid_view">HybridView</string>
+    <string name="title_activity_sync_interval">SyncIntervalActivity</string>
+
+</resources>

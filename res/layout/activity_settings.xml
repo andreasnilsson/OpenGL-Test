@@ -1,0 +1,110 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/rLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/redEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:text="@string/red"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/redEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:ems="3"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="255" >
+            <requestFocus />
+        </EditText>
+
+        <SeekBar
+            android:id="@+id/redSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/redEditText"
+            android:layout_toRightOf="@+id/rLabel"
+            android:max="@integer/max_intensity"
+            android:paddingLeft="@dimen/padding_large" />
+
+        <TextView
+            android:id="@+id/gLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/greenEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/redEditText"
+            android:gravity="center_vertical"
+            android:text="@string/green"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <SeekBar
+            android:id="@+id/greenSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/redEditText"
+            android:layout_toLeftOf="@+id/greenEditText"
+            android:layout_toRightOf="@+id/rLabel"
+            android:max="@integer/max_intensity"
+            android:paddingLeft="@dimen/padding_large" />
+
+        <EditText
+            android:id="@+id/greenEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/greenSeekBar"
+            android:ems="3"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="255" />
+
+        <TextView
+            android:id="@+id/bLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/blueEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/gLabel"
+            android:gravity="center_vertical"
+            android:text="@string/bString"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <SeekBar
+            android:id="@+id/blueSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gLabel"
+            android:layout_toLeftOf="@+id/blueEditText"
+            android:layout_toRightOf="@+id/rLabel"
+            android:max="@integer/max_intensity"
+            android:paddingLeft="@dimen/padding_large" />
+
+        <EditText
+            android:id="@+id/blueEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/blueSeekBar"
+            android:ems="3"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="255" />
+    </RelativeLayout>
+
+</FrameLayout>

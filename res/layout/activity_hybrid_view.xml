@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.enighma.testopengl.HybridGLView
+        android:id="@+id/hybridGLView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:overScrollMode="always" />
+
+    <SlidingDrawer
+        android:id="@+id/slidingDrawer1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:bottomOffset="0dp"
+        android:content="@+id/content"
+        android:handle="@+id/handle"
+        android:topOffset="400dp" >
+
+        <RelativeLayout
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <Button
+                android:id="@+id/handle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Color" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/redEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/redSeekBar"
+                    android:editable="false"
+                    android:minEms="1"
+                    android:text="R: " >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/blueEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/greenSeekBar"
+                    android:editable="false"
+                    android:minEms="1"
+                    android:text="G: " >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/redEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/blueSeekBar"
+                    android:editable="false"
+                    android:minEms="1"
+                    android:text="B: " >
+                </TextView>
+
+                <SeekBar
+                    android:id="@id/redSeekBar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/redEditText"
+                    android:layout_weight="1" 
+                    android:max="255"/>
+
+                <SeekBar
+                    android:id="@id/greenSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/redSeekBar"
+                    android:layout_toRightOf="@id/blueEditText" 
+                    android:max="255"/>
+
+                <SeekBar
+                    android:id="@id/blueSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/greenSeekBar"
+                    android:layout_toRightOf="@id/redEditText" 
+                    android:max="255"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </SlidingDrawer>
+    
+</RelativeLayout>
