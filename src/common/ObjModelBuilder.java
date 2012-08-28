@@ -30,7 +30,7 @@ public class ObjModelBuilder {
 	}
 
 	public ObjModel buildObjModel() {
-		Debug.startMethodTracing("buildModel");
+		//Debug.startMethodTracing("buildModel");
 		long start = Calendar.getInstance().getTimeInMillis();
 		Log.i(ObjModelBuilder.class.toString(), "model build start");
 
@@ -97,7 +97,7 @@ public class ObjModelBuilder {
 		long end = Calendar.getInstance().getTimeInMillis();
 		Log.i(ObjModelBuilder.class.toString(), "Model build finished: " + (end - start) + " ms");
 
-		Debug.stopMethodTracing();
+		//Debug.stopMethodTracing();
 
 		return model;
 	}

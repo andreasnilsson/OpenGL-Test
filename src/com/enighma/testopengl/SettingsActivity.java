@@ -149,13 +149,13 @@ public class SettingsActivity extends FragmentActivity implements ActionBar.TabL
 
 		
 		if(seekBar == redSeekBar){
-			TexturedCube.red = progress / 255f;	
+			StandardModel.red = progress / 255f;	
 		}
 		if(seekBar == greenSeekBar){
-			TexturedCube.green = progress / 255f;	
+			StandardModel.green = progress / 255f;	
 		}
 		if(seekBar == blueSeekBar){
-			TexturedCube.blue = progress / 255f;	
+			StandardModel.blue = progress / 255f;	
 		}
 		
 		

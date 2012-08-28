@@ -39,9 +39,9 @@ public class TestOpenGLActivity extends Activity implements SeekBar.OnSeekBarCha
         
         
         
-        int rValue = (int) (TexturedCube.red * 255);
-        int gValue = (int) (TexturedCube.green * 255);
-        int bValue = (int) (TexturedCube.blue * 255);
+        int rValue = (int) (StandardModel.red * 255);
+        int gValue = (int) (StandardModel.green * 255);
+        int bValue = (int) (StandardModel.blue * 255);
         
         redSeekBar.setProgress(rValue);
         greenSeekBar.setProgress(gValue);
@@ -78,24 +78,24 @@ public class TestOpenGLActivity extends Activity implements SeekBar.OnSeekBarCha
         if(isColorChangeMode){
 
             if (seekBar == redSeekBar) {
-                TexturedCube.red = value;
+                StandardModel.red = value;
             }
             if(seekBar == greenSeekBar){
-                TexturedCube.green = value;
+                StandardModel.green = value;
             }
             if(seekBar == blueSeekBar){
-                TexturedCube.blue = value;
+                StandardModel.blue = value;
             }   
         }else{
 
             if (seekBar == redSeekBar) {
-                TexturedCube.attAmbient = value;
+                StandardModel.attAmbient = value;
             }
             if(seekBar == greenSeekBar){
-                TexturedCube.attDiffuse = value;
+                StandardModel.attDiffuse = value;
             }
             if(seekBar == blueSeekBar){
-                TexturedCube.attSpecular = value;
+                StandardModel.attSpecular = value;
             }
         }
 

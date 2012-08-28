@@ -42,14 +42,14 @@ public class MyRenderer extends GLES20 implements Renderer {
     float posX = 0f;
     float posY = 0f;
     
-    TexturedCube rectangle;
+    StandardModel rectangle;
     private float mScale = 1.0f;
     
     
     
     public MyRenderer(Context context, GLSurfaceView master) {
         mContext = context;
-        rectangle = new TexturedCube(context, new Point(0, 0), new Point(400, 400));
+        rectangle = new StandardModel(context, new Point(0, 0), new Point(400, 400));
         
         
     }

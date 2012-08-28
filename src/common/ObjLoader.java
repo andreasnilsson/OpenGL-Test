@@ -117,7 +117,7 @@ public class ObjLoader {
 		while (true) {
 			int c = is.read();
 			sb.append((char) c);
-			if (c == '\n' || c == -1) {
+			if (c == '\n' || c == -1) { //new line or file end
 				String line = sb.toString().trim();
 				// if line is only length 1 disregard it.
 				if (line.length() > 1) {
@@ -153,7 +153,7 @@ public class ObjLoader {
 		Log.i(LOG_TAG, "Load finished: " + (end - start) + " ms");
 	}
 
-	public ObjModel loadObject(InputStream is) throws IOException {
+	public ObjModel load(InputStream is) throws IOException {
 		int nFaces = countFaces(is);
 		preAllocateData(nFaces);
 		
